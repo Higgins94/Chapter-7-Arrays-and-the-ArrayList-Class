@@ -5,18 +5,29 @@
 public class ArrayPassToMethod { 
    public static void main(String[] args) { 
    
-      int [] array = {1 ,2 ,3 ,4 ,5 ,6 ,7};
+      int [] array = {5 ,10 ,30 ,42 ,55 ,66 ,72};
       
       for (int i = 0; i < array.length; i++) { 
-         Pass(i); 
-      } 
+         PassVaraible(array[i]);
+      }
+      System.out.println(""); 
+      PassObject(array);  
    } 
    
    /**
-      The Pass method receieves the array as an argument
-      @perma number The varaible to pass the array element to 
+      The PassVaraiable method receieves the array's individual elements as an arg
+      @perma number The variable to pass the array element to 
    */ 
-   public static void Pass(int number) { 
+   public static void PassVaraible(int number) { 
       System.out.print(number + " "); 
    }
+   /**
+      The PassObject method receives the entire array as an arg
+      @perma An array argument
+   */ 
+   public static void PassObject(int[] array) { 
+      
+      for (int i = 0; i < array.length; i++)  
+         System.out.print(array[i] + " ");  
+   } 
 }  
