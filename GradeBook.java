@@ -6,8 +6,10 @@ Admittedly I was little slack on this program. The assignment wanted this to be 
 but I just have this all under the main class. The assignment wanted four seperate 1d arrays but I just made two 2d arrays instead. 
 I also just have kinda like a proof of concept for the methods there is no input validations outside of accepting test scores,
  and no while loops to continue the input, average spits out everyone. 
-
 */ 
+/**
+  The GradeBook class stores students names, test scores, and final letter grade. 
+*/
 public class GradeBook { 
    public static void main(String[] args) {
       
@@ -43,9 +45,8 @@ public class GradeBook {
       
    }
 
-
    /**
-   
+      The getName method returns a student's name based on what number student they are
    */ 
    
    public static void getName(String name[][]) {
@@ -59,20 +60,27 @@ public class GradeBook {
       System.out.print("Name: " + name[number][0])
       System.out.print("\n--------------------"); 
    } 
-   
+
+  /**
+    The average class calculates the students course grade through averaging the total test score
+  */ 
    public static void average(String names[][], double grades[][]) { 
+      
+      public static void average(String names[][], double grades[][]) { 
       
       final int CLASS_SIZE = 5; 
       final double TOTAL_TEST = 4.0;
       String letterGrade;
-      double average, total;
+      double average, total,
+      double grade; 
       
       for (int student = 0; student < CLASS_SIZE; student++) {
          total = 0.0; 
-         for (int test = 0; test < TOTAL_TEST; test++) { 
-            total += grades[student][test]; 
+         for (int test = 0; test < TOTAL_TEST; test++) {
+            grade = grades[student][test]; 
+            total += grade;   
          } 
-         average = total / TOTAL_TEST; 
+         average = total / (TOTAL_TEST); 
          System.out.printf("\nStudent #" + (student + 1) + "\nAverage: %.1f" ,average);
          letterGrade = getLetterGrade(average);
          names[student][1] = letterGrade; 
@@ -81,9 +89,9 @@ public class GradeBook {
          average = 0.0; 
       }    
    }
-   
+
    /**
-      
+      The getLetterGrade method returns the letter grade that corresponds with the average  
    */ 
    
    public static String getLetterGrade(double average) { 
