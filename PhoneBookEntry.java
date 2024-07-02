@@ -3,6 +3,8 @@
                                                      *Programming Challenge 17*           
       This problem was weird. Challenge said to make five objects with this class, store them in an Array List in the another program (PhoneBook.java in this case),
       then display information there. Seems very poorly optimized and not able to scale. Should have made the Array List in this class to use one object. 
+       *Edit* I probably misunderstood the challenge, think I was suppose to have an array of objects - check Challenge 18: TriviaGame class
+         for a more in depth demonstration of this concept*
 */ 
 
 /**
