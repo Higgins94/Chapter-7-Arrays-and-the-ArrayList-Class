@@ -2,7 +2,9 @@ import java.util.*;
 /*
                                                      *Programming Challenge 17*           
       This problem was weird. Challenge said to make five objects with the class, store them in an array in this program, then display information. 
-         Seems very poorly optimized and not able to scale. Should have made the Array List in the PhoneBookEntry class.  
+         Seems very poorly optimized and not able to scale. Should have made the Array List in the PhoneBookEntry class. 
+         *Edit* I probably misunderstood the challenge, think I was suppose to have an array of objects - check Challenge 18: TriviaGame class
+         for a more in depth demonstration of this concept*
 */
 
 /**
